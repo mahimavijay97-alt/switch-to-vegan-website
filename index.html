@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwitchToVegan - Embracing a Vegan Lifestyle</title>
+    <meta name="description" content="Discover the benefits of a vegan and cruelty-free lifestyle with SwitchToVegan. Find recipes, resources, and support for your compassionate journey.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="split-hero__nav">
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/logo.svg" alt="SwitchToVegan Logo">
+        </a>
+    </div>
+    <nav class="main-nav">
+        <ul class="main-nav__links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</div>
+
+        
+        <div class="split-hero__content">
+            <div class="hero-content-wrapper">
+                <span class="pre-heading">Switch To Vegan</span>
+                <h1 class="hero-title">Choose Vegan, Embrace a Kinder World</h1>
+                <p class="hero-description">Discover how compassionate choices can transform your health, protect the planet, and save animals from suffering. Join me on a journey of kindness and enlightenment.</p>
+                <div class="cta-group">
+                    <a href="resources.html" class="btn btn-gradient">Begin Your Journey</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="hero-images">
+                <div class="animal-circle">
+                    <img src="assets/animals/happy-pig.svg" alt="Happy Pig">
+                </div>
+                <div class="animal-circle">
+                    <img src="assets/animals/happy-cow.svg" alt="Happy Cow">
+                </div>
+                <div class="animal-circle">
+                    <img src="assets/animals/happy-chicken.svg" alt="Happy Chicken">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Values Section - Wave Layout -->
+    <section class="values-section diagonal-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Why Choose Vegan?</span>
+                <h2>Living with <span class="gradient-text">Compassion</span></h2>
+                <p class="section-intro">A vegan lifestyle aligns with core values that benefit everyone and everything around us</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>For Your Health</h3>
+                    <p>Reduce the risk of heart disease, diabetes, and certain cancers while enhancing overall vitality and wellbeing.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>For The Planet</h3>
+                    <p>Reduce greenhouse gas emissions, water usage, and land degradation by choosing vegan foods.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>For The Animals</h3>
+                    <p>Choose compassion over cruelty by refusing to participate in the exploitation of sentient beings.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>For Your Soul</h3>
+                    <p>Experience the inner peace that comes from living in harmony with your deepest values of compassion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Add Your Experience Section -->
+    <section class="share-experience">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Share Your Journey</span>
+                <h2>Add Your <span class="gradient-text">Experience</span></h2>
+                <p class="section-intro">Your story can inspire and help others on their path to plant-based living</p>
+            </div>
+            
+            <div class="experience-form-container">
+                <form class="experience-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="experience-name">Your Name</label>
+                            <input type="text" id="experience-name" name="name" placeholder="Name or nickname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience-email">Email</label>
+                            <input type="email" id="experience-email" name="email" placeholder="Your email (not published)" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience-title">Title of Your Experience</label>
+                        <input type="text" id="experience-title" name="title" placeholder="E.g., 'My First Month as a Vegan'" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience-content">Share Your Experience</label>
+                        <textarea id="experience-content" name="content" rows="5" placeholder="Tell me about your journey, challenges, victories, and advice for others..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="consent" required>
+                            <span class="checkmark"></span>
+                            I consent to having my experience shared on Switch To Vegan website
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-gradient">Share My Experience</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Content - Modern Layout -->
+    <section class="featured-content">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Meet Them</span>
+                <h2>The Beings Behind Your <span class="highlight">Choices</span></h2>
+                <p class="section-intro">Every animal deserves to live free from harm and exploitation</p>
+            </div>
+            
+            <div class="animal-spotlight">
+                <div class="animal-spotlight__image">
+                    <img src="assets/animals/happy-cow.svg" alt="Happy Cow" class="spotlight-image">
+                    <div class="spotlight-badge">Intelligent</div>
+                </div>
+                <div class="animal-spotlight__content">
+                    <h3 class="spotlight-title">Cows: Emotional & Social</h3>
+                    <p class="spotlight-text">Cows form deep friendships, bear grudges, and even shed tears. They deserve to live natural lives free from exploitation, able to raise their calves and express their natural behaviors.</p>
+                    <a href="about.html" class="text-link">Learn more about animal sentience <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="animal-gallery">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="assets/animals/happy-pig.svg" alt="Happy Pig">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Pigs: Smarter Than Dogs</h4>
+                        <p>Playful and intelligent creatures who solve puzzles and recognize themselves in mirrors.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="assets/animals/happy-chicken.svg" alt="Happy Chicken">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Chickens: Complex Communicators</h4>
+                        <p>With over 30 distinct calls, chickens have sophisticated social structures and communication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials - New Design -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-wrapper">
+                <div class="testimonials-header">
+                    <h2>Voices of <span class="gradient-text">Compassion</span></h2>
+                    <p>Real stories from people who embraced a vegan lifestyle</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.42857 17.1429C10.8107 17.1429 12.0357 17.6429 13.1036 18.6429C14.1714 19.6429 14.7054 20.8929 14.7054 22.3929C14.7054 23.8929 14.1714 25.1429 13.1036 26.1429C12.0357 27.1429 10.75 27.6429 9.25 27.6429C7.75 27.6429 6.46429 27.0179 5.39643 25.7679C4.32857 24.5179 3.79464 22.7857 3.79464 20.5714C3.79464 18.3571 4.48214 16.2857 5.85714 14.3571C7.23214 12.4286 9.36607 10.6429 12.25 9L14.1786 11.8571C12.3214 12.7143 10.8571 13.6429 9.78571 14.6429C8.71429 15.6429 8.14286 16.4286 8.07143 17C8 17.0714 8.17857 17.1429 8.60714 17.1429H9.42857ZM22.5714 17.1429C23.9536 17.1429 25.1786 17.6429 26.2464 18.6429C27.3143 19.6429 27.8482 20.8929 27.8482 22.3929C27.8482 23.8929 27.3143 25.1429 26.2464 26.1429C25.1786 27.1429 23.8929 27.6429 22.3929 27.6429C20.8929 27.6429 19.6071 27.0179 18.5393 25.7679C17.4714 24.5179 16.9375 22.7857 16.9375 20.5714C16.9375 18.3571 17.625 16.2857 19 14.3571C20.375 12.4286 22.5089 10.6429 25.3929 9L27.3214 11.8571C25.4643 12.7143 24 13.6429 22.9286 14.6429C21.8571 15.6429 21.2857 16.4286 21.2143 17C21.1429 17.0714 21.3214 17.1429 21.75 17.1429H22.5714Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">Switching to a vegan diet transformed my health and energy levels. I never knew I could feel this good, and the environmental impact is just a beautiful bonus.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"></div>
+                            <div class="author-info">
+                                <h4>Emily Johnson</h4>
+                                <p>Vegan for 3 years</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.42857 17.1429C10.8107 17.1429 12.0357 17.6429 13.1036 18.6429C14.1714 19.6429 14.7054 20.8929 14.7054 22.3929C14.7054 23.8929 14.1714 25.1429 13.1036 26.1429C12.0357 27.1429 10.75 27.6429 9.25 27.6429C7.75 27.6429 6.46429 27.0179 5.39643 25.7679C4.32857 24.5179 3.79464 22.7857 3.79464 20.5714C3.79464 18.3571 4.48214 16.2857 5.85714 14.3571C7.23214 12.4286 9.36607 10.6429 12.25 9L14.1786 11.8571C12.3214 12.7143 10.8571 13.6429 9.78571 14.6429C8.71429 15.6429 8.14286 16.4286 8.07143 17C8 17.0714 8.17857 17.1429 8.60714 17.1429H9.42857ZM22.5714 17.1429C23.9536 17.1429 25.1786 17.6429 26.2464 18.6429C27.3143 19.6429 27.8482 20.8929 27.8482 22.3929C27.8482 23.8929 27.3143 25.1429 26.2464 26.1429C25.1786 27.1429 23.8929 27.6429 22.3929 27.6429C20.8929 27.6429 19.6071 27.0179 18.5393 25.7679C17.4714 24.5179 16.9375 22.7857 16.9375 20.5714C16.9375 18.3571 17.625 16.2857 19 14.3571C20.375 12.4286 22.5089 10.6429 25.3929 9L27.3214 11.8571C25.4643 12.7143 24 13.6429 22.9286 14.6429C21.8571 15.6429 21.2857 16.4286 21.2143 17C21.1429 17.0714 21.3214 17.1429 21.75 17.1429H22.5714Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">As someone who loves cooking, discovering vegan cuisine opened up a whole new world of flavors and techniques. My family doesn't even miss meat anymore!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"></div>
+                            <div class="author-info">
+                                <h4>David Chen</h4>
+                                <p>Vegan chef</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Begin Your <span class="gradient-text">Compassionate</span> Journey</h2>
+                <p>Join thousands who are making kinder choices for animals, the planet, and their own health. I'll support you every step of the way.</p>
+                <a href="resources.html" class="btn btn-gradient btn-large">Start Today</a>
+            </div>
+            <div class="cta-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- Suggestions and Ideas -->
+    <section class="suggestions-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Community Input</span>
+                <h2>Suggestions and <span class="gradient-text">Ideas</span></h2>
+                <p class="section-intro">Help shape my resources and community by sharing your ideas</p>
+            </div>
+            
+            <div class="suggestions-grid">
+                <div class="suggestion-card">
+                    <div class="suggestion-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Content Suggestions</h3>
+                    <p>What topics would you like to see covered? Let me know what information would be most helpful on your vegan journey.</p>
+                    <a href="#" class="text-link">Submit content idea <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="suggestion-card">
+                    <div class="suggestion-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Features</h3>
+                    <p>How can I better support the community? Share your ideas for new features, content, or resources.</p>
+                    <a href="#" class="text-link">Suggest a feature <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="suggestion-card">
+                    <div class="suggestion-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Add Your Recipe</h3>
+                    <p>Have a delicious plant-based recipe to share? Contribute your favorite dishes to my growing collection.</p>
+                    <a href="#" class="text-link">Share a recipe <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter - Modern Design -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2>Stay Connected</h2>
+                    <p>Join my newsletter to receive updates, recipes, and inspiration for your vegan journey.</p>
+                    <form class="newsletter-form">
+                        <div class="form-field">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-accent">Subscribe</button>
+                        </div>
+                        <p class="form-note">I respect your privacy and will never share your information.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modern Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.svg" alt="Switch To Vegan Logo">
+                        <span>Switch To Vegan</span>
+                    </a>
+                    <p class="footer-tagline">Dedicated to promoting a compassionate vegan lifestyle and advocating for the ethical treatment of all beings.</p>
+
+                </div>
+                
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="resources.html#nutrition">Nutrition Guides</a></li>
+                        <li><a href="resources.html#recipes">Vegan Recipes</a></li>
+                        <li><a href="resources.html#ethical">Ethical Living</a></li>
+                        <li><a href="resources.html#advocacy">Animal Advocacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hello@SwitchToVegan.org">hello@SwitchToVegan.org</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Global Advocacy</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023-2025 Switch To Vegan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - SwitchToVegan</title>
+    <meta name="description" content="Browse SwitchToVegan gallery of beautiful plant-based dishes, cruelty-free products, and sustainable living inspiration.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="split-hero__nav">
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/logo.svg" alt="SwitchToVegan Logo">
+        </a>
+    </div>
+    <nav class="main-nav">
+        <ul class="main-nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</div>
+
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Plant-Based Gallery</h1>
+            <p>Feast your eyes on beautiful dishes, ingredients, and a compassionate lifestyle</p>
+        </div>
+    </section>
+
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="meals">Meals</button>
+                <button class="filter-btn" data-filter="ingredients">Ingredients</button>
+                <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Meals -->
+                <div class="gallery-item" data-category="meals">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <circle cx="150" cy="150" r="100" fill="#8fb573" />
+                                <circle cx="150" cy="150" r="70" fill="#557340" />
+                                <circle cx="150" cy="150" r="40" fill="#dda15e" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Buddha Bowl</h3>
+                        <p>A nutritious bowl with quinoa, roasted sweet potatoes, avocado, and tahini dressing.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="meals">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <rect x="50" y="100" width="200" height="100" fill="#8fb573" />
+                                <circle cx="150" cy="150" r="50" fill="#dda15e" />
+                                <rect x="100" y="120" width="100" height="60" fill="#557340" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Plant-Based Lasagna</h3>
+                        <p>Layers of pasta, vegetables, tofu ricotta, and homemade tomato sauce.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="meals">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <circle cx="150" cy="150" r="80" fill="#dda15e" />
+                                <path d="M100,180 Q150,120 200,180" stroke="#557340" stroke-width="10" fill="none" />
+                                <circle cx="120" cy="140" r="20" fill="#8fb573" />
+                                <circle cx="180" cy="140" r="20" fill="#8fb573" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Veggie Burger</h3>
+                        <p>Hearty black bean burger with all the fixings on a whole grain bun.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="meals">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <path d="M75,200 L225,200 L200,100 L100,100 Z" fill="#dda15e" />
+                                <circle cx="150" cy="150" r="40" fill="#8fb573" />
+                                <rect x="120" y="120" width="60" height="60" fill="#557340" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Thai Green Curry</h3>
+                        <p>Aromatic coconut curry with vegetables and tofu, served with jasmine rice.</p>
+                    </div>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="gallery-item" data-category="ingredients">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <circle cx="150" cy="150" r="80" fill="#8fb573" />
+                                <circle cx="120" cy="120" r="20" fill="#557340" />
+                                <circle cx="180" cy="120" r="20" fill="#557340" />
+                                <circle cx="120" cy="180" r="20" fill="#557340" />
+                                <circle cx="180" cy="180" r="20" fill="#557340" />
+                                <circle cx="150" cy="150" r="20" fill="#557340" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Fresh Herbs</h3>
+                        <p>Aromatic basil, cilantro, mint, and parsley for enhancing plant-based dishes.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ingredients">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <path d="M100,100 C100,50 200,50 200,100 L200,200 C200,250 100,250 100,200 Z" fill="#dda15e" />
+                                <path d="M120,120 L180,120" stroke="#557340" stroke-width="10" />
+                                <path d="M120,150 L180,150" stroke="#557340" stroke-width="10" />
+                                <path d="M120,180 L180,180" stroke="#557340" stroke-width="10" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Ancient Grains</h3>
+                        <p>Nutritious quinoa, farro, millet, and amaranth—staples of plant-based eating.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ingredients">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <circle cx="100" cy="150" r="50" fill="#8fb573" />
+                                <circle cx="200" cy="150" r="50" fill="#8fb573" />
+                                <circle cx="150" cy="100" r="50" fill="#8fb573" />
+                                <circle cx="150" cy="200" r="50" fill="#8fb573" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Colorful Vegetables</h3>
+                        <p>A rainbow of peppers, tomatoes, carrots, and purple cabbage.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ingredients">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <path d="M100,100 C150,50 250,150 200,200 C150,250 50,150 100,100 Z" fill="#dda15e" />
+                                <circle cx="150" cy="150" r="30" fill="#557340" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Plant-Based Proteins</h3>
+                        <p>Assortment of beans, lentils, tofu, tempeh, and seitan.</p>
+                    </div>
+                </div>
+
+                <!-- Lifestyle -->
+                <div class="gallery-item" data-category="lifestyle">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <path d="M75,225 L225,225 L225,150 L75,150 Z" fill="#8fb573" />
+                                <path d="M100,150 L100,225" stroke="#557340" stroke-width="10" />
+                                <path d="M150,150 L150,225" stroke="#557340" stroke-width="10" />
+                                <path d="M200,150 L200,225" stroke="#557340" stroke-width="10" />
+                                <path d="M75,150 L150,75 L225,150" fill="#dda15e" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Farmers Market Visit</h3>
+                        <p>Shopping for local, seasonal produce directly from farmers.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="lifestyle">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <rect x="75" y="100" width="150" height="150" fill="#8fb573" />
+                                <rect x="100" y="125" width="100" height="100" fill="#557340" />
+                                <path d="M75,100 L150,50 L225,100" fill="#dda15e" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Zero-Waste Kitchen</h3>
+                        <p>Glass containers, reusable bags, and compost setup for an eco-friendly kitchen.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="lifestyle">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <circle cx="150" cy="150" r="80" fill="#557340" />
+                                <path d="M110,110 L190,190" stroke="#8fb573" stroke-width="15" />
+                                <path d="M110,190 L190,110" stroke="#8fb573" stroke-width="15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Cruelty-Free Beauty</h3>
+                        <p>Collection of vegan skincare, makeup, and personal care products.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="lifestyle">
+                    <div class="gallery-image">
+                        <div class="svg-placeholder">
+                            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="300" fill="#e6eeda" />
+                                <path d="M75,225 C75,175 225,175 225,225" fill="#8fb573" />
+                                <rect x="125" y="125" width="50" height="100" fill="#557340" />
+                                <path d="M100,225 L100,125 C100,100 200,100 200,125 L200,225" fill="none" stroke="#dda15e" stroke-width="10" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Home Garden</h3>
+                        <p>Growing your own herbs and vegetables for the freshest plant-based ingredients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="user-gallery">
+        <div class="container">
+            <h2>Share Your Photos</h2>
+            <p>I'd love to see your plant-based creations! Submit your photos below to be featured in the gallery.</p>
+            <form class="gallery-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="photo-title">Photo Title</label>
+                    <input type="text" id="photo-title" name="photo-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo-description">Description</label>
+                    <textarea id="photo-description" name="photo-description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="photo-upload">Upload Your Photo</label>
+                    <input type="file" id="photo-upload" name="photo" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="consent" required>
+                        <span class="checkmark"></span>
+                        I consent to having my photo displayed in the SwitchToVegan gallery
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Photo</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="inspiration">
+        <div class="container">
+            <h2>Find Inspiration</h2>
+            <p>Explore my resources and gallery for daily inspiration, recipes, and plant-based living tips.</p>
+            <div class="inspiration-links">
+                <a href="resources.html" class="btn btn-outline">Browse Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="SwitchToVegan Logo">
+                    <p>SwitchToVegan</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023-2025 SwitchToVegan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

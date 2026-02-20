@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - SwitchToVegan</title>
+  <meta name="description" content="Explore articles on vegan living, animal compassion, nutrition, and sustainable choices. Get inspired and informed on your plant-based journey.">
+  <meta property="og:title" content="Blog - SwitchToVegan">
+  <meta property="og:description" content="Explore articles on vegan living, animal compassion, nutrition, and sustainable choices. Get inspired and informed on your plant-based journey.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .split-hero__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__links li a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+
+.main-nav__links li a:hover {
+  color: #FFB6C1;
+}
+
+.main-nav__links li a.active {
+  color: #D8BFD8;
+  font-weight: 600;
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #FFB6C1;
+  cursor: pointer;
+}
+
+    /* Base Styles */
+    :root {
+      /* Color Palette - Soft Pink & Lavender */
+      --primary: #FFB6C1;    /* Light pink */
+      --primary-light: rgba(255, 182, 193, 0.2);
+      --secondary: #E6A4B4;  /* Dusty rose */
+      --secondary-light: rgba(230, 164, 180, 0.2);
+      --accent: #D8BFD8;    /* Thistle (light lavender) */
+      --accent-light: rgba(216, 191, 216, 0.2);
+      --light-bg: #FFF0F5;  /* Lavender blush */
+      --dark-bg: #F8E1E8;   /* Very light pink */
+      --text-primary: #333333; /* Dark gray */
+      --text-secondary: #555555; /* Medium gray */
+      --white: #FFFFFF;
+      --black: #000000;
+      --gray-100: #F9FAFB;
+      --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --red-500: #EF4444;
+      --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --radius: 0.5rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    button {
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      background: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Utility Classes */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-6 {
+      gap: 1.5rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .mb-12 {
+      margin-bottom: 3rem;
+    }
+
+    .mb-16 {
+      margin-bottom: 4rem;
+    }
+
+    .mt-1 {
+      margin-top: 0.25rem;
+    }
+
+    .mt-3 {
+      margin-top: 0.75rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .ml-1 {
+      margin-left: 0.25rem;
+    }
+
+    .ml-2 {
+      margin-left: 0.5rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+
+    .mx-2 {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .py-16 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .py-20 {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .p-3 {
+      padding: 0.75rem;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    .rounded-md {
+      border-radius: 0.375rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .shadow-sm {
+      box-shadow: var(--shadow-soft);
+    }
+
+    .shadow-md {
+      box-shadow: var(--shadow-medium);
+    }
+
+    .shadow-card {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .shadow-lg {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .bg-white {
+      background-color: var(--white);
+    }
+
+    .bg-lightBg {
+      background-color: var(--light-bg);
+    }
+
+    .bg-primary {
+      background-color: var(--primary);
+    }
+
+    .bg-primary-light {
+      background-color: var(--primary-light);
+    }
+
+    .bg-secondary {
+      background-color: var(--secondary);
+    }
+
+    .bg-secondary-light {
+      background-color: var(--secondary-light);
+    }
+
+    .bg-accent-light {
+      background-color: var(--accent-light);
+    }
+
+    .bg-gray-200 {
+      background-color: var(--gray-200);
+    }
+
+    .border {
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    .border-primary {
+      border-color: var(--primary);
+    }
+
+    .border-primary\/20 {
+      border-color: rgba(255, 182, 193, 0.2);
+    }
+
+    .border-gray-200 {
+      border-color: var(--gray-200);
+    }
+
+    .border-red-500 {
+      border-color: var(--red-500);
+    }
+
+    .text-white {
+      color: var(--white);
+    }
+
+    .text-primary {
+      color: var(--primary);
+    }
+
+    .text-secondary {
+      color: var(--secondary);
+    }
+
+    .text-accent {
+      color: var(--accent);
+    }
+
+    .text-textSecondary {
+      color: var(--text-secondary);
+    }
+
+    .text-red-500 {
+      color: var(--red-500);
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .font-medium {
+      font-weight: 500;
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+
+    .whitespace-nowrap {
+      white-space: nowrap;
+    }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
+
+    .transition-colors {
+      transition-property: color, background-color, border-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
+
+    .hover\:shadow-md:hover {
+      box-shadow: var(--shadow-medium);
+    }
+
+    .hover\:shadow-lg:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .hover\:bg-primary\/20:hover {
+      background-color: rgba(255, 182, 193, 0.2);
+    }
+
+    .hover\:bg-secondary:hover {
+      background-color: var(--secondary);
+    }
+
+    .hover\:text-primary:hover {
+      color: var(--primary);
+    }
+
+    .hover\:text-accent:hover {
+      color: var(--accent);
+    }
+
+    .hover\:underline:hover {
+      text-decoration: underline;
+    }
+
+    .hover\:-translate-y-2:hover {
+      transform: translateY(-0.5rem);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn-gradient {
+      padding: 0.75rem 2rem;
+      border-radius: 0.375rem;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+
+    .btn-gradient:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-0.25rem);
+    }
+
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .overflow-x-auto {
+      overflow-x: auto;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .min-w-max {
+      min-width: max-content;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .h-full {
+      height: 100%;
+    }
+
+    .h-56 {
+      height: 14rem;
+    }
+
+    .w-1\/3 {
+      width: 33.333333%;
+    }
+
+    .w-1\/4 {
+      width: 25%;
+    }
+
+    .w-3\/4 {
+      width: 75%;
+    }
+
+    .w-6 {
+      width: 1.5rem;
+    }
+
+    .h-6 {
+      height: 1.5rem;
+    }
+
+    .h-4 {
+      height: 1rem;
+    }
+
+    .space-x-2 > * + * {
+      margin-left: 0.5rem;
+    }
+
+    .space-x-4 > * + * {
+      margin-left: 1rem;
+    }
+
+    .space-x-6 > * + * {
+      margin-left: 1.5rem;
+    }
+
+    .space-x-8 > * + * {
+      margin-left: 2rem;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .top-4 {
+      top: 1rem;
+    }
+
+    .right-4 {
+      right: 1rem;
+    }
+
+    .z-50 {
+      z-index: 50;
+    }
+
+    .flex-1 {
+      flex: 1 1 0%;
+    }
+
+    .transform {
+      transform: translateY(0);
+    }
+
+    .duration-300 {
+      transition-duration: 300ms;
+    }
+
+    /* Animation Utility */
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: .5;
+      }
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Blog Card Styling */
+    .blog-card {
+      display: block;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .blog-card:hover {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(-0.5rem);
+    }
+
+    .blog-card__image {
+      position: relative;
+      height: 14rem;
+    }
+
+    .blog-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-card__category {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--primary);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .blog-card__content {
+      padding: 1.5rem;
+    }
+
+    .blog-card__meta {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-card__meta-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .blog-card__meta-item svg {
+      margin-right: 0.5rem;
+    }
+
+    .blog-card__meta-separator {
+      margin: 0 0.5rem;
+    }
+
+    .blog-card__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-card__excerpt {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .blog-card__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .blog-card__read-more {
+      color: var(--primary);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .blog-card__read-more:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .blog-card__read-more svg {
+      margin-left: 0.5rem;
+    }
+
+    .blog-card__social {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .blog-card__social-button {
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    .blog-card__social-button:hover {
+      color: var(--primary);
+    }
+
+    /* Newsletter Section */
+    .newsletter-form {
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    .newsletter-form__input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .newsletter-form__input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 0.375rem;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-form__input:focus {
+      outline: none;
+      ring: 2px solid rgba(255, 182, 193, 0.3);
+      border-color: var(--primary);
+    }
+
+    .newsletter-form__input.error {
+      border-color: var(--red-500);
+    }
+
+    .newsletter-form__error {
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      color: var(--red-500);
+    }
+
+    .newsletter-form__disclaimer {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-top: 0.75rem;
+    }
+
+    .newsletter-success {
+      background: linear-gradient(to right, rgba(255, 182, 193, 0.2), rgba(216, 191, 216, 0.2));
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 182, 193, 0.2);
+    }
+
+    .newsletter-success__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Pagination */
+    .pagination {
+      display: inline-flex;
+      border-radius: 0.375rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .pagination__button {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: 1px solid var(--gray-200);
+      background-color: white;
+      color: var(--text-secondary);
+      transition: background-color 0.3s ease;
+    }
+
+    .pagination__button:hover {
+      background-color: var(--light-bg);
+    }
+
+    .pagination__button--active {
+      background-color: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .pagination__button:first-child {
+      border-top-left-radius: 0.375rem;
+      border-bottom-left-radius: 0.375rem;
+    }
+
+    .pagination__button:last-child {
+      border-top-right-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
+    }
+
+    /* Responsive Breakpoints */
+    @media (min-width: 640px) {
+      .sm\:flex-row {
+        flex-direction: row;
+      }
+
+      .sm\:text-left {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .md\:flex {
+        display: flex;
+      }
+
+      .md\:hidden {
+        display: none;
+      }
+
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .md\:text-3xl {
+        font-size: 1.875rem;
+      }
+
+      .md\:text-5xl {
+        font-size: 3rem;
+      }
+
+      .md\:mt-0 {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .lg\:text-6xl {
+        font-size: 3.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="split-hero__nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.svg" alt="SwitchToVegan Logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+
+
+
+  <main>
+    <!-- Hero Section -->
+    <section class="py-8 bg-gradient-to-r from-primary/20 to-accent/20">
+      <div class="container mx-auto">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">The <span class="gradient-text">Blog</span></h1>
+          <p class="text-lg text-textSecondary mb-8">Insights, inspiration, and information for your vegan journey</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Blog Content -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto">
+        <!-- Category Filter -->
+        <div class="mb-12 overflow-x-auto">
+          <div class="flex space-x-4 min-w-max">
+            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors bg-primary text-white">
+              All Posts
+            </button>
+            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors bg-lightBg text-textSecondary hover:bg-primary/20">
+              Nutrition
+            </button>
+            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors bg-lightBg text-textSecondary hover:bg-primary/20">
+              Animal Rights
+            </button>
+            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors bg-lightBg text-textSecondary hover:bg-primary/20">
+              Sustainability
+            </button>
+            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors bg-lightBg text-textSecondary hover:bg-primary/20">
+              Recipes
+            </button>
+            <button class="px-6 py-2 rounded-full text-sm font-medium transition-colors bg-lightBg text-textSecondary hover:bg-primary/20">
+              Lifestyle
+            </button>
+          </div>
+        </div>
+        
+        <!-- Featured Post -->
+        <div class="mb-16">
+          <h2 class="font-heading text-2xl md:text-3xl font-bold mb-8">Featured Post</h2>
+          <div class="bg-lightBg rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                  alt="The Environmental Impact of Plant-Based Diets" 
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Sustainability
+                </div>
+              </div>
+              <div class="p-8">
+                <div class="flex items-center text-sm mb-3 text-textSecondary">
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                    </svg>
+                    May 2, 2025
+                  </span>
+                  <span class="mx-2">•</span>
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor">
+                      <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                    </svg>
+                    8 min read
+                  </span>
+                </div>
+                <h3 class="font-heading text-2xl font-bold mb-4">The Environmental Impact of Plant-Based Diets</h3>
+                <p class="text-textSecondary mb-6">Discover how your food choices affect climate change, water usage, and land conservation. This comprehensive guide explores the environmental benefits of adopting a plant-based lifestyle and provides actionable tips for sustainable eating.</p>
+                <a href="/blog/environmental-impact-of-plant-based-diets" class="inline-flex items-center text-primary font-medium hover:text-accent transition-colors">
+                  Read Full Article 
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                    <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Blog Grid -->
+        <div class="mb-12">
+          <h2 class="font-heading text-2xl md:text-3xl font-bold mb-8">All Articles</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Card 1 -->
+            <article class="rounded-xl overflow-hidden bg-white shadow-card hover:shadow-medium transition-all duration-300 transform hover:-translate-y-2">
+              <div class="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                  alt="Essential Nutrients for Plant-Based Athletes" 
+                  class="w-full h-56 object-cover"
+                />
+                <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Nutrition
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center text-sm mb-3 text-textSecondary">
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                    </svg>
+                    April 28, 2025
+                  </span>
+                  <span class="mx-2">•</span>
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor">
+                      <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                    </svg>
+                    6 min read
+                  </span>
+                </div>
+                <h3 class="font-heading text-xl font-bold mb-3">Essential Nutrients for Plant-Based Athletes</h3>
+                <p class="text-textSecondary mb-4 line-clamp-3">Learn how to optimize your plant-based diet for athletic performance with key nutrients and meal timing strategies. From protein to micronutrients, this guide covers everything you need to thrive as a vegan athlete.</p>
+                <div class="flex justify-between items-center">
+                  <a href="/blog/essential-nutrients-for-plant-based-athletes" class="text-primary font-medium hover:text-accent transition-colors flex items-center">
+                    Read More 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-xs" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                  </a>
+                  <div class="flex space-x-2">
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Facebook">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 320 512" fill="currentColor">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Pinterest">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Blog Card 2 -->
+            <article class="rounded-xl overflow-hidden bg-white shadow-card hover:shadow-medium transition-all duration-300 transform hover:-translate-y-2">
+              <div class="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1566847438217-76e82d383f84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                  alt="The Ethical Case for Animal Rights" 
+                  class="w-full h-56 object-cover"
+                />
+                <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Animal Rights
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center text-sm mb-3 text-textSecondary">
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                    </svg>
+                    April 25, 2025
+                  </span>
+                  <span class="mx-2">•</span>
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor">
+                      <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                    </svg>
+                    7 min read
+                  </span>
+                </div>
+                <h3 class="font-heading text-xl font-bold mb-3">The Ethical Case for Animal Rights</h3>
+                <p class="text-textSecondary mb-4 line-clamp-3">Explore the philosophical and ethical foundations for extending moral consideration to non-human animals. This thought-provoking article examines different perspectives on animal rights and our moral responsibilities.</p>
+                <div class="flex justify-between items-center">
+                  <a href="/blog/ethical-case-for-animal-rights" class="text-primary font-medium hover:text-accent transition-colors flex items-center">
+                    Read More 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-xs" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                  </a>
+                  <div class="flex space-x-2">
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Facebook">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 320 512" fill="currentColor">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Pinterest">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Blog Card 3 -->
+            <article class="rounded-xl overflow-hidden bg-white shadow-card hover:shadow-medium transition-all duration-300 transform hover:-translate-y-2">
+              <div class="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1611072965169-e964eda48546?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                  alt="10 Delicious Plant-Based Breakfast Ideas" 
+                  class="w-full h-56 object-cover"
+                />
+                <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Recipes
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center text-sm mb-3 text-textSecondary">
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                    </svg>
+                    April 20, 2025
+                  </span>
+                  <span class="mx-2">•</span>
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor">
+                      <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                    </svg>
+                    5 min read
+                  </span>
+                </div>
+                <h3 class="font-heading text-xl font-bold mb-3">10 Delicious Plant-Based Breakfast Ideas</h3>
+                <p class="text-textSecondary mb-4 line-clamp-3">Start your day with these nutritious and satisfying plant-based breakfast recipes. From savory tofu scrambles to sweet overnight oats, these recipes will revolutionize your morning routine.</p>
+                <div class="flex justify-between items-center">
+                  <a href="/blog/plant-based-breakfast-ideas" class="text-primary font-medium hover:text-accent transition-colors flex items-center">
+                    Read More 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-xs" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                  </a>
+                  <div class="flex space-x-2">
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Facebook">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 320 512" fill="currentColor">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Pinterest">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Blog Card 4 -->
+            <article class="rounded-xl overflow-hidden bg-white shadow-card hover:shadow-medium transition-all duration-300 transform hover:-translate-y-2">
+              <div class="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1601504829789-7630e0facc14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                  alt="Creating a Sustainable Vegan Wardrobe" 
+                  class="w-full h-56 object-cover"
+                />
+                <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Lifestyle
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center text-sm mb-3 text-textSecondary">
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                    </svg>
+                    April 15, 2025
+                  </span>
+                  <span class="mx-2">•</span>
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor">
+                      <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                    </svg>
+                    9 min read
+                  </span>
+                </div>
+                <h3 class="font-heading text-xl font-bold mb-3">Creating a Sustainable Vegan Wardrobe</h3>
+                <p class="text-textSecondary mb-4 line-clamp-3">Discover how to build a cruelty-free closet without compromising on style or ethics. From vegan leather alternatives to eco-friendly fabrics, this guide will help you make compassionate fashion choices.</p>
+                <div class="flex justify-between items-center">
+                  <a href="/blog/sustainable-vegan-wardrobe" class="text-primary font-medium hover:text-accent transition-colors flex items-center">
+                    Read More 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-xs" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                  </a>
+                  <div class="flex space-x-2">
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Facebook">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 320 512" fill="currentColor">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Pinterest">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Blog Card 5 -->
+            <article class="rounded-xl overflow-hidden bg-white shadow-card hover:shadow-medium transition-all duration-300 transform hover:-translate-y-2">
+              <div class="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                  alt="How Veganism Reduces Your Carbon Footprint" 
+                  class="w-full h-56 object-cover"
+                />
+                <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Sustainability
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center text-sm mb-3 text-textSecondary">
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                    </svg>
+                    April 10, 2025
+                  </span>
+                  <span class="mx-2">•</span>
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor">
+                      <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                    </svg>
+                    8 min read
+                  </span>
+                </div>
+                <h3 class="font-heading text-xl font-bold mb-3">How Veganism Reduces Your Carbon Footprint</h3>
+                <p class="text-textSecondary mb-4 line-clamp-3">Understand the environmental impact of your dietary choices with this data-driven analysis. Learn how plant-based eating can significantly reduce greenhouse gas emissions and contribute to a healthier planet.</p>
+                <div class="flex justify-between items-center">
+                  <a href="/blog/veganism-carbon-footprint" class="text-primary font-medium hover:text-accent transition-colors flex items-center">
+                    Read More 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-xs" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                  </a>
+                  <div class="flex space-x-2">
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Facebook">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 320 512" fill="currentColor">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Pinterest">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Blog Card 6 -->
+            <article class="rounded-xl overflow-hidden bg-white shadow-card hover:shadow-medium transition-all duration-300 transform hover:-translate-y-2">
+              <div class="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                  alt="Plant-Based Nutrition Myths Debunked" 
+                  class="w-full h-56 object-cover"
+                />
+                <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Nutrition
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center text-sm mb-3 text-textSecondary">
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                    </svg>
+                    April 5, 2025
+                  </span>
+                  <span class="mx-2">•</span>
+                  <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor">
+                      <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                    </svg>
+                    7 min read
+                  </span>
+                </div>
+                <h3 class="font-heading text-xl font-bold mb-3">Plant-Based Nutrition Myths Debunked</h3>
+                <p class="text-textSecondary mb-4 line-clamp-3">Separate fact from fiction with this science-backed exploration of common misconceptions about plant-based diets. From protein concerns to calcium needs, get evidence-based answers to all your nutrition questions.</p>
+                <div class="flex justify-between items-center">
+                  <a href="/blog/plant-based-nutrition-myths" class="text-primary font-medium hover:text-accent transition-colors flex items-center">
+                    Read More 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-xs" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor">
+                      <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                  </a>
+                  <div class="flex space-x-2">
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Facebook">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 320 512" fill="currentColor">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                      </svg>
+                    </button>
+                    <button class="text-textSecondary hover:text-primary transition-colors" aria-label="Share on Pinterest">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Pagination -->
+          <div class="flex justify-center mt-12">
+            <nav class="pagination">
+              <button class="pagination__button">Previous</button>
+              <button class="pagination__button pagination__button--active">1</button>
+              <button class="pagination__button">2</button>
+              <button class="pagination__button">3</button>
+              <button class="pagination__button">Next</button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gradient-to-r from-primary/20 to-accent/20">
+      <div class="container mx-auto">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="font-heading text-3xl font-bold mb-6">Join Our <span class="gradient-text">Newsletter</span></h2>
+          <p class="text-textSecondary mb-8">
+            Sign up to receive our weekly newsletter with the latest articles, recipes, and plant-based inspiration.
+          </p>
+          
+          <form class="newsletter-form">
+            <div class="newsletter-form__input-group sm:flex-row">
+              <div class="flex-1">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="newsletter-form__input"
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn-gradient whitespace-nowrap"
+              >
+                Subscribe Now
+              </button>
+            </div>
+            <p class="newsletter-form__disclaimer">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white py-12">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+        <div class="flex items-center mb-6 md:mb-0">
+          <a href="/" class="flex items-center gap-2">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 2C10.059 2 2 10.059 2 20C2 29.941 10.059 38 20 38C29.941 38 38 29.941 38 20C38 10.059 29.941 2 20 2Z" fill="#FFB6C1" fill-opacity="0.2"/>
+              <path d="M27.5 13C27.5 17.9706 23.9706 21.5 19 21.5C14.0294 21.5 10.5 17.9706 10.5 13C10.5 8.02944 14.0294 4.5 19 4.5C23.9706 4.5 27.5 8.02944 27.5 13Z" fill="#FFB6C1" fill-opacity="0.4"/>
+              <path d="M22 28C22 30.2091 20.2091 32 18 32C15.7909 32 14 30.2091 14 28C14 25.7909 15.7909 24 18 24C20.2091 24 22 25.7909 22 28Z" fill="#D8BFD8" fill-opacity="0.6"/>
+              <path d="M29 28C31.7614 28 34 25.7614 34 23C34 20.2386 31.7614 18 29 18C26.2386 18 24 20.2386 24 23C24 25.7614 26.2386 28 29 28Z" fill="#C3B1E1" fill-opacity="0.4"/>
+              <path d="M20 1C9.50659 1 1 9.50659 1 20C1 30.4934 9.50659 39 20 39C30.4934 39 39 30.4934 39 20C39 9.50659 30.4934 1 20 1ZM20 3C29.3888 3 37 10.6112 37 20C37 29.3888 29.3888 37 20 37C10.6112 37 3 29.3888 3 20C3 10.6112 10.6112 3 20 3Z" fill="#FFB6C1"/>
+            </svg>
+            <span class="font-heading font-bold text-lg">SwitchToVegan</span>
+          </a>
+        </div>
+        
+        <nav>
+          <ul class="flex flex-wrap justify-center gap-6">
+            <li><a href="/" class="text-textSecondary hover:text-primary transition-colors">Home</a></li>
+            <li><a href="/about" class="text-textSecondary hover:text-primary transition-colors">About</a></li>
+            <li><a href="/blog" class="text-primary transition-colors">Blog</a></li>
+            <li><a href="/vegan-toolkit" class="text-textSecondary hover:text-primary transition-colors">Vegan Toolkit</a></li>
+            <li><a href="/gallery" class="text-textSecondary hover:text-primary transition-colors">Gallery</a></li>
+            <li><a href="/contact" class="text-textSecondary hover:text-primary transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="border-t border-gray-200 pt-6">
+        <p class="text-center text-textSecondary text-sm">
+          © 2025 SwitchToVegan. All rights reserved. A compassionate space for vegan living.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.querySelector('.mobile-menu-button');
+      if (mobileMenuButton) {
+        const mobileMenu = document.createElement('div');
+        mobileMenu.classList.add('mobile-menu', 'hidden', 'fixed', 'top-0', 'left-0', 'w-full', 'h-full', 'bg-white', 'z-50', 'p-6');
+        
+        mobileMenu.innerHTML = `
+          <div class="flex justify-between items-center mb-8">
+            <a href="/" class="flex items-center gap-2">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2C10.059 2 2 10.059 2 20C2 29.941 10.059 38 20 38C29.941 38 38 29.941 38 20C38 10.059 29.941 2 20 2Z" fill="#FFB6C1" fill-opacity="0.2"/>
+                <path d="M27.5 13C27.5 17.9706 23.9706 21.5 19 21.5C14.0294 21.5 10.5 17.9706 10.5 13C10.5 8.02944 14.0294 4.5 19 4.5C23.9706 4.5 27.5 8.02944 27.5 13Z" fill="#FFB6C1" fill-opacity="0.4"/>
+                <path d="M22 28C22 30.2091 20.2091 32 18 32C15.7909 32 14 30.2091 14 28C14 25.7909 15.7909 24 18 24C20.2091 24 22 25.7909 22 28Z" fill="#D8BFD8" fill-opacity="0.6"/>
+                <path d="M29 28C31.7614 28 34 25.7614 34 23C34 20.2386 31.7614 18 29 18C26.2386 18 24 20.2386 24 23C24 25.7614 26.2386 28 29 28Z" fill="#C3B1E1" fill-opacity="0.4"/>
+                <path d="M20 1C9.50659 1 1 9.50659 1 20C1 30.4934 9.50659 39 20 39C30.4934 39 39 30.4934 39 20C39 9.50659 30.4934 1 20 1ZM20 3C29.3888 3 37 10.6112 37 20C37 29.3888 29.3888 37 20 37C10.6112 37 3 29.3888 3 20C3 10.6112 10.6112 3 20 3Z" fill="#FFB6C1"/>
+              </svg>
+              <span class="font-heading font-bold text-lg">SwitchToVegan</span>
+            </a>
+            <button class="close-menu text-textPrimary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="1.5em" height="1.5em" fill="currentColor">
+                <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+              </svg>
+            </button>
+          </div>
+          <nav>
+            <ul class="flex flex-col space-y-6 text-lg">
+              <li><a href="/" class="text-textPrimary hover:text-primary font-medium block py-2">Home</a></li>
+              <li><a href="/about" class="text-textPrimary hover:text-primary font-medium block py-2">About</a></li>
+              <li><a href="/blog" class="text-primary font-medium block py-2">Blog</a></li>
+              <li><a href="/vegan-toolkit" class="text-textPrimary hover:text-primary font-medium block py-2">Vegan Toolkit</a></li>
+              <li><a href="/gallery" class="text-textPrimary hover:text-primary font-medium block py-2">Gallery</a></li>
+              <li><a href="/contact" class="text-textPrimary hover:text-primary font-medium block py-2">Contact</a></li>
+            </ul>
+          </nav>
+        `;
+        
+        document.body.appendChild(mobileMenu);
+        
+        const closeMenuButton = document.querySelector('.close-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
