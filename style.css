@@ -1564,8 +1564,3 @@ input:focus, textarea:focus, select:focus {
 .text-link:hover i {
     transform: translateX(2px);
 }
-
-a.active {
-  color: #22c55e;   /* choose your green */
-  font-weight: 600;
-}
