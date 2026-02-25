@@ -1802,3 +1802,12 @@ input:focus, textarea:focus, select:focus {
         text-align: center;
     }
 }
+
+/* ========================== */
+/* ABOUT PAGE IMAGE CLEANUP  */
+/* ========================== */
+
+.about-page .about-image {
+    width: 100%;
+    border-radius: 12px;
+}
