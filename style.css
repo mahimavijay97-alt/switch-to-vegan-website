@@ -1561,6 +1561,31 @@ input:focus, textarea:focus, select:focus {
     transition: transform var(--transition-fast);
 }
 
+/* ========================= */
+/* ABOUT PAGE HEADER STYLE  */
+/* ========================= */
+
+.about-page .page-header {
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-page .header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-page .page-header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-page .page-header p {
+    font-size: 18px;
+    color: #666;
+}
+
 .text-link:hover i {
     transform: translateX(2px);
 }
