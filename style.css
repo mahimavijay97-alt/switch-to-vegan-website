@@ -1667,3 +1667,64 @@ input:focus, textarea:focus, select:focus {
         flex-direction: column;
     }
 }
+
+/* =================================== */
+/* ABOUT PAGE UNDERSTANDING SECTION   */
+/* =================================== */
+
+.about-page .understanding-section {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.about-page .understanding-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-page .understanding-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+}
+
+.about-page .understanding-top div {
+    flex: 1;
+}
+
+.about-page .understanding-top img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Cards Layout */
+.about-page .understanding-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+}
+
+.about-page .understanding-cards > div {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.about-page .understanding-cards > div:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page .understanding-top,
+    .about-page .understanding-cards {
+        flex-direction: column;
+    }
+}
