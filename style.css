@@ -1870,3 +1870,48 @@ input:focus, textarea:focus, select:focus {
     max-width: 1100px;
     margin: 0 auto;
 }
+
+/* ============================== */
+/* ABOUT PAGE NEWSLETTER SECTION  */
+/* ============================== */
+
+.about-page .newsletter-section {
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+    text-align: center;
+}
+
+.about-page .newsletter-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-page .newsletter-form {
+    margin-top: 30px;
+}
+
+.about-page .newsletter-form__input-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.about-page .newsletter-form__input {
+    padding: 12px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page .newsletter-form__input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-page .newsletter-form__input {
+        width: 100%;
+        max-width: 300px;
+    }
+}
