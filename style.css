@@ -1602,12 +1602,14 @@ input:focus, textarea:focus, select:focus {
 .about-page .mission-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
+.about-page .mission-content > div {
+    width: 50%;
+}
 .about-page .mission-content div {
     flex: 1;
 }
