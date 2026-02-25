@@ -1767,3 +1767,38 @@ input:focus, textarea:focus, select:focus {
         flex-direction: column;
     }
 }
+
+/* ============================== */
+/* ABOUT PAGE MOVEMENT SECTION   */
+/* ============================== */
+
+.about-page .movement-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+}
+
+.about-page .movement-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-page .movement-content div {
+    flex: 1;
+}
+
+.about-page .movement-content img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page .movement-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
