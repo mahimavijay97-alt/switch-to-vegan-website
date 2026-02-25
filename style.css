@@ -1589,3 +1589,37 @@ input:focus, textarea:focus, select:focus {
 .text-link:hover i {
     transform: translateX(2px);
 }
+
+/* ========================= */
+/* ABOUT PAGE MISSION STYLE */
+/* ========================= */
+
+.about-page .mission-section {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.about-page .mission-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-page .mission-content div {
+    flex: 1;
+}
+
+.about-page .mission-section img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page .mission-content {
+        flex-direction: column;
+    }
+}
