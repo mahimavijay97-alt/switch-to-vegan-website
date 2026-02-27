@@ -1600,12 +1600,11 @@ input:focus, textarea:focus, select:focus {
 }
 
 .about-page .mission-content {
+    .about-page .mission-content {
     display: flex;
-    flex-direction: row;   /* FORCE side-by-side */
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 60px;
-    margin-top: 40px;
 }
 
 .about-page .mission-text,
