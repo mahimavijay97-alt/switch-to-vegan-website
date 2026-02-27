@@ -1906,3 +1906,7 @@ input:focus, textarea:focus, select:focus {
         max-width: 300px;
     }
 }
+
+.about-page .mission-section h2 {
+    text-align: left !important;
+}
