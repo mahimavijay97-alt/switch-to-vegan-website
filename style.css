@@ -1595,27 +1595,30 @@ input:focus, textarea:focus, select:focus {
 /* ========================= */
 
 .about-page .mission-section {
-    padding: 80px 20px;
+    padding: 80px 0;
     background: #ffffff;
 }
 
 .about-page .mission-heading {
-    max-width: 1100px;
+    width: 1100px;
     margin: 0 auto 40px auto;
 }
 
 .about-page .mission-content {
+    width: 1100px;
+    margin: 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 60px;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
-.about-page .mission-text,
+.about-page .mission-text {
+    width: 50%;
+}
+
 .about-page .mission-image {
-    flex: 1;
+    width: 50%;
 }
 
 .about-page .mission-image img {
@@ -1628,6 +1631,12 @@ input:focus, textarea:focus, select:focus {
 @media (max-width: 768px) {
     .about-page .mission-content {
         flex-direction: column;
+        width: 90%;
+    }
+
+    .about-page .mission-text,
+    .about-page .mission-image {
+        width: 100%;
     }
 }
 
