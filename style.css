@@ -1600,7 +1600,6 @@ input:focus, textarea:focus, select:focus {
 }
 
 .about-page .mission-content {
-    .about-page .mission-content {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
