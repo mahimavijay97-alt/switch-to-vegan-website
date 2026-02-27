@@ -1599,11 +1599,18 @@ input:focus, textarea:focus, select:focus {
     background: #ffffff;
 }
 
+.about-page .mission-heading {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+}
+
 .about-page .mission-content {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .about-page .mission-text,
@@ -1618,7 +1625,6 @@ input:focus, textarea:focus, select:focus {
     border-radius: 12px;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .about-page .mission-content {
         flex-direction: column;
