@@ -1907,6 +1907,12 @@ input:focus, textarea:focus, select:focus {
     }
 }
 
+/* ----------------------- */
+/* Mission heading spacing */
+/* ----------------------- */
 .about-page .mission-section h2 {
-    text-align: left !important;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+    padding-left: 20px;
 }
